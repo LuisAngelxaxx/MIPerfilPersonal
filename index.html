@@ -1,0 +1,416 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Página Web Profesional</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background-color: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* MENÚ */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTENIDO */
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #1f4e79;
+            border-bottom: 2px solid #1f4e79;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* FORMULARIO */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #1f4e79;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #163a5c;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* DISEÑO RESPONSIVO */
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header id="inicio">
+
+        <h1>Luis Angel Torres Sangama</h1>
+
+        <p>Estudiante de Desarrollo de Software</p>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#perfil">Perfil</a>
+            <a href="#estudios">Estudios</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- PERFIL -->
+        <section id="perfil">
+
+            <h2>Perfil Profesional</h2>
+
+            <p>
+                Soy estudiante de primer ciclo de Desarrollo de Software
+                en CERTUS, con conocimientos iniciales en Java y HTML.
+                Estoy interesado en el desarrollo de aplicaciones y en
+                la creación de soluciones tecnológicas.
+            </p>
+
+            <p>
+                Me considero una persona responsable, organizada y con
+                disposición para aprender continuamente. Busco adquirir
+                experiencia, aplicar mis conocimientos y fortalecer mis
+                habilidades en el desarrollo de software.
+            </p>
+
+        </section>
+
+
+        <!-- ESTUDIOS -->
+        <section id="estudios">
+
+            <h2>Estudios</h2>
+
+            <h3>Instituto CERTUS</h3>
+
+            <p>
+                <strong>Carrera:</strong> Desarrollo de Software
+            </p>
+
+            <p>
+                <strong>Periodo:</strong> 2026 - En curso
+            </p>
+
+            <p>
+                <strong>Ciclo:</strong> Primer ciclo
+            </p>
+
+        </section>
+
+
+        <!-- HABILIDADES -->
+        <section id="habilidades">
+
+            <h2>Habilidades</h2>
+
+            <ul>
+
+                <li>Trabajo en equipo</li>
+
+                <li>Responsabilidad</li>
+
+                <li>Resolución de problemas</li>
+
+                <li>Adaptabilidad tecnológica</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section id="proyectos">
+
+            <h2>Experiencia y Proyectos</h2>
+
+            <h3>Proyecto académico - Página web personal</h3>
+
+            <p>
+                <strong>CERTUS | 2026</strong>
+            </p>
+
+            <ul>
+
+                <li>
+                    Desarrollo de una página web personal utilizando HTML y CSS.
+                </li>
+
+                <li>
+                    Creación de un menú de navegación y diferentes
+                    secciones informativas.
+                </li>
+
+                <li>
+                    Implementación de un formulario de contacto.
+                </li>
+
+                <li>
+                    Aplicación de conceptos básicos de diseño web.
+                </li>
+
+            </ul>
+
+
+            <h3>Proyecto académico - Prácticas de programación en Java</h3>
+
+            <p>
+                <strong>CERTUS | 2026</strong>
+            </p>
+
+            <ul>
+
+                <li>
+                    Desarrollo de ejercicios básicos utilizando Java.
+                </li>
+
+                <li>
+                    Aplicación de variables, operadores y estructuras
+                    condicionales.
+                </li>
+
+                <li>
+                    Resolución de problemas mediante lógica de programación.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+
+            <h2>Formulario de Contacto</h2>
+
+            <form>
+
+                <label for="nombres">
+                    Nombres:
+                </label>
+
+                <input
+                    type="text"
+                    id="nombres"
+                    name="nombres"
+                    required
+                >
+
+
+                <label for="apellidos">
+                    Apellidos:
+                </label>
+
+                <input
+                    type="text"
+                    id="apellidos"
+                    name="apellidos"
+                    required
+                >
+
+
+                <label for="email">
+                    Correo electrónico:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+
+                <label for="telefono">
+                    Teléfono:
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                >
+
+
+                <label for="motivo">
+                    Motivo de contacto:
+                </label>
+
+                <select id="motivo" name="motivo">
+
+                    <option value="">
+                        Seleccione una opción
+                    </option>
+
+                    <option value="consulta">
+                        Consulta
+                    </option>
+
+                    <option value="proyecto">
+                        Proyecto
+                    </option>
+
+                    <option value="informacion">
+                        Información
+                    </option>
+
+                    <option value="otro">
+                        Otro
+                    </option>
+
+                </select>
+
+
+                <label for="comentarios">
+                    Comentarios:
+                </label>
+
+                <textarea
+                    id="comentarios"
+                    name="comentarios"
+                ></textarea>
+
+
+                <button type="submit">
+                    Enviar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            Luis Angel Torres Sangama © 2026
+        </p>
+
+        <p>
+            Estudiante de Desarrollo de Software - CERTUS
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
