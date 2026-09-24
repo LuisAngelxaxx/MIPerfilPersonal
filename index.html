@@ -1,416 +1,662 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mi Página Web Profesional</title>
+    <title>WEB ENIGMA | JavaScript</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+
+        * {
             margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* ENCABEZADO */
-        header {
-            background-color: #1f4e79;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #111;
         }
 
-        header h1 {
-            margin-bottom: 10px;
+        /* BARRA SUPERIOR */
+
+        .top {
+            height: 5px;
+            background: #111;
         }
 
-        /* MENÚ */
+        /* NAVEGACIÓN */
+
         nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* CONTENIDO */
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        section {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #1f4e79;
-            border-bottom: 2px solid #1f4e79;
-            padding-bottom: 8px;
-        }
-
-        h3 {
-            color: #333;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* FORMULARIO */
-        form {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 6%;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        label {
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .logo {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 2px;
         }
 
-        input,
-        select,
-        textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .logo span {
+            font-weight: 400;
+        }
+
+        nav p {
+            font-size: 12px;
+            color: #777;
+            letter-spacing: 1px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: #111;
+            color: white;
+            padding: 90px 6%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .mini {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 9vw, 105px);
+            line-height: .85;
+            letter-spacing: -5px;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: #777;
+        }
+
+        .hero-text {
+            margin-top: 30px;
+            max-width: 550px;
+            color: #bbb;
+            line-height: 1.7;
             font-size: 15px;
         }
 
-        textarea {
-            min-height: 100px;
+        .hero-number {
+            position: absolute;
+            right: 5%;
+            bottom: -55px;
+            font-size: 250px;
+            font-weight: 900;
+            color: #1b1b1b;
+            line-height: 1;
         }
 
-        button {
-            margin-top: 15px;
-            padding: 12px;
-            background-color: #1f4e79;
+        /* CONTENEDOR */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* DATOS */
+
+        .datos {
+            background: white;
+            border: 1px solid #ddd;
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            margin-bottom: 70px;
+        }
+
+        .datos-titulo {
+            background: #111;
             color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: bold;
         }
 
-        button:hover {
-            background-color: #163a5c;
+        .datos-info {
+            padding: 30px;
         }
 
-        /* PIE DE PÁGINA */
+        .datos-info p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .datos-info strong {
+            color: #111;
+        }
+
+        /* CABECERA DE SECCIÓN */
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #111;
+            padding-bottom: 15px;
+        }
+
+        .section-head h2 {
+            font-size: 32px;
+            letter-spacing: -1px;
+        }
+
+        .section-head span {
+            font-size: 12px;
+            color: #888;
+            letter-spacing: 2px;
+        }
+
+        /* MATRIZ */
+
+        .matriz {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        /* TARJETAS */
+
+        .tarjeta {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+            min-height: 205px;
+            position: relative;
+            transition: .3s;
+        }
+
+        .tarjeta:hover {
+            background: #111;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .tarjeta:hover p {
+            color: #aaa;
+        }
+
+        .tarjeta:hover .numero {
+            color: #555;
+        }
+
+        .numero {
+            font-size: 42px;
+            font-weight: 900;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        /* BOTÓN */
+
+        .boton {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        .tarjeta:hover .boton {
+            background: white;
+            color: #111;
+        }
+
+        /* FOOTER */
+
         footer {
-            background-color: #1f4e79;
+            background: #111;
+            color: #888;
+            padding: 30px 6%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
             color: white;
-            text-align: center;
-            padding: 20px;
         }
 
-        /* DISEÑO RESPONSIVO */
-        @media (max-width: 600px) {
+        /* RESPONSIVE */
 
-            nav a {
-                display: block;
-                margin: 10px 0;
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
             }
 
-            main {
-                padding: 10px;
+            nav p {
+                display: none;
             }
 
-            section {
-                padding: 18px;
+            .hero {
+                padding: 65px 6%;
             }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: -3px;
+            }
+
+            .hero-number {
+                font-size: 120px;
+                bottom: -20px;
+            }
+
+            .datos {
+                grid-template-columns: 1fr;
+            }
+
+            .datos-titulo {
+                padding: 20px;
+            }
+
+            .matriz {
+                grid-template-columns: 1fr;
+            }
+
+            .section-head h2 {
+                font-size: 25px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 12px;
+            }
+
         }
+
     </style>
 
 </head>
 
+
 <body>
 
-    <!-- ENCABEZADO -->
-    <header id="inicio">
+    <div class="top"></div>
 
-        <h1>Luis Angel Torres Sangama</h1>
+    <nav>
 
-        <p>Estudiante de Desarrollo de Software</p>
+        <div class="logo">
+            WEB <span>ENIGMA</span>
+        </div>
 
-        <!-- MENÚ DE NAVEGACIÓN -->
-        <nav>
+        <p>
+            FUNDAMENTOS DE DESARROLLO FRONT-END
+        </p>
 
-            <a href="#inicio">Inicio</a>
-            <a href="#perfil">Perfil</a>
-            <a href="#estudios">Estudios</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+    </nav>
 
-        </nav>
 
-    </header>
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="mini">
+                JAVASCRIPT / 2026
+            </div>
+
+            <h1>
+                10<br>
+                RETOS<span>.</span>
+            </h1>
+
+            <p class="hero-text">
+                Colección de ejercicios básicos de JavaScript
+                desarrollados como parte del curso Fundamentos
+                de Desarrollo Front-End.
+            </p>
+
+        </div>
+
+        <div class="hero-number">
+            JS
+        </div>
+
+    </section>
 
 
     <main>
 
-        <!-- PERFIL -->
-        <section id="perfil">
 
-            <h2>Perfil Profesional</h2>
+        <!-- DATOS -->
 
-            <p>
-                Soy estudiante de primer ciclo de Desarrollo de Software
-                en CERTUS, con conocimientos iniciales en Java y HTML.
-                Estoy interesado en el desarrollo de aplicaciones y en
-                la creación de soluciones tecnológicas.
-            </p>
+        <section class="datos">
 
-            <p>
-                Me considero una persona responsable, organizada y con
-                disposición para aprender continuamente. Busco adquirir
-                experiencia, aplicar mis conocimientos y fortalecer mis
-                habilidades en el desarrollo de software.
-            </p>
+            <div class="datos-titulo">
+                DATOS DEL<br>ESTUDIANTE
+            </div>
 
-        </section>
+            <div class="datos-info">
 
+                <p>
+                    <strong>Nombre:</strong>
+                    Luis Ángel Torres Sangama
+                </p>
 
-        <!-- ESTUDIOS -->
-        <section id="estudios">
+                <p>
+                    <strong>Carrera:</strong>
+                    Desarrollo de Software
+                </p>
 
-            <h2>Estudios</h2>
+                <p>
+                    <strong>Institución:</strong>
+                    CERTUS
+                </p>
 
-            <h3>Instituto CERTUS</h3>
+                <p>
+                    <strong>Ciclo:</strong>
+                    Primer ciclo
+                </p>
 
-            <p>
-                <strong>Carrera:</strong> Desarrollo de Software
-            </p>
+                <p>
+                    <strong>Año académico:</strong>
+                    2026
+                </p>
 
-            <p>
-                <strong>Periodo:</strong> 2026 - En curso
-            </p>
-
-            <p>
-                <strong>Ciclo:</strong> Primer ciclo
-            </p>
+            </div>
 
         </section>
 
 
-        <!-- HABILIDADES -->
-        <section id="habilidades">
+        <!-- PROBLEMAS -->
 
-            <h2>Habilidades</h2>
+        <div class="section-head">
 
-            <ul>
+            <h2>
+                Problemas
+            </h2>
 
-                <li>Trabajo en equipo</li>
+            <span>
+                01 — 10
+            </span>
 
-                <li>Responsabilidad</li>
-
-                <li>Resolución de problemas</li>
-
-                <li>Adaptabilidad tecnológica</li>
-
-            </ul>
-
-        </section>
+        </div>
 
 
-        <!-- PROYECTOS -->
-        <section id="proyectos">
-
-            <h2>Experiencia y Proyectos</h2>
-
-            <h3>Proyecto académico - Página web personal</h3>
-
-            <p>
-                <strong>CERTUS | 2026</strong>
-            </p>
-
-            <ul>
-
-                <li>
-                    Desarrollo de una página web personal utilizando HTML y CSS.
-                </li>
-
-                <li>
-                    Creación de un menú de navegación y diferentes
-                    secciones informativas.
-                </li>
-
-                <li>
-                    Implementación de un formulario de contacto.
-                </li>
-
-                <li>
-                    Aplicación de conceptos básicos de diseño web.
-                </li>
-
-            </ul>
+        <section class="matriz">
 
 
-            <h3>Proyecto académico - Prácticas de programación en Java</h3>
+            <div class="tarjeta">
 
-            <p>
-                <strong>CERTUS | 2026</strong>
-            </p>
+                <div class="numero">
+                    01
+                </div>
 
-            <ul>
+                <h3>
+                    Compra en una bodega
+                </h3>
 
-                <li>
-                    Desarrollo de ejercicios básicos utilizando Java.
-                </li>
+                <p>
+                    Cálculo del monto total de una compra
+                    de gaseosas.
+                </p>
 
-                <li>
-                    Aplicación de variables, operadores y estructuras
-                    condicionales.
-                </li>
+                <a href="pro01.html" class="boton">
+                    ABRIR RETO →
+                </a>
 
-                <li>
-                    Resolución de problemas mediante lógica de programación.
-                </li>
-
-            </ul>
-
-        </section>
+            </div>
 
 
-        <!-- CONTACTO -->
-        <section id="contacto">
+            <div class="tarjeta">
 
-            <h2>Formulario de Contacto</h2>
+                <div class="numero">
+                    02
+                </div>
 
-            <form>
+                <h3>
+                    Útiles escolares
+                </h3>
 
-                <label for="nombres">
-                    Nombres:
-                </label>
+                <p>
+                    Cálculo del costo total de cuadernos
+                    y lapiceros.
+                </p>
 
-                <input
-                    type="text"
-                    id="nombres"
-                    name="nombres"
-                    required
-                >
+                <a href="pro02.html" class="boton">
+                    ABRIR RETO →
+                </a>
 
-
-                <label for="apellidos">
-                    Apellidos:
-                </label>
-
-                <input
-                    type="text"
-                    id="apellidos"
-                    name="apellidos"
-                    required
-                >
+            </div>
 
 
-                <label for="email">
-                    Correo electrónico:
-                </label>
+            <div class="tarjeta">
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                >
+                <div class="numero">
+                    03
+                </div>
 
+                <h3>
+                    Cálculo de edad
+                </h3>
 
-                <label for="telefono">
-                    Teléfono:
-                </label>
+                <p>
+                    Obtención de la edad aproximada
+                    mediante el año de nacimiento.
+                </p>
 
-                <input
-                    type="tel"
-                    id="telefono"
-                    name="telefono"
-                >
+                <a href="pro03.html" class="boton">
+                    ABRIR RETO →
+                </a>
 
-
-                <label for="motivo">
-                    Motivo de contacto:
-                </label>
-
-                <select id="motivo" name="motivo">
-
-                    <option value="">
-                        Seleccione una opción
-                    </option>
-
-                    <option value="consulta">
-                        Consulta
-                    </option>
-
-                    <option value="proyecto">
-                        Proyecto
-                    </option>
-
-                    <option value="informacion">
-                        Información
-                    </option>
-
-                    <option value="otro">
-                        Otro
-                    </option>
-
-                </select>
+            </div>
 
 
-                <label for="comentarios">
-                    Comentarios:
-                </label>
+            <div class="tarjeta">
 
-                <textarea
-                    id="comentarios"
-                    name="comentarios"
-                ></textarea>
+                <div class="numero">
+                    04
+                </div>
+
+                <h3>
+                    Promedio de notas
+                </h3>
+
+                <p>
+                    Cálculo del promedio final
+                    de tres notas.
+                </p>
+
+                <a href="pro04.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
 
 
-                <button type="submit">
-                    Enviar
-                </button>
+            <div class="tarjeta">
 
-            </form>
+                <div class="numero">
+                    05
+                </div>
+
+                <h3>
+                    Descuento en tienda
+                </h3>
+
+                <p>
+                    Cálculo del descuento del 15%
+                    y precio final.
+                </p>
+
+                <a href="pro05.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="numero">
+                    06
+                </div>
+
+                <h3>
+                    Cuenta de una cena
+                </h3>
+
+                <p>
+                    División de una cuenta entre
+                    varias personas.
+                </p>
+
+                <a href="pro06.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="numero">
+                    07
+                </div>
+
+                <h3>
+                    Sueldo de trabajador
+                </h3>
+
+                <p>
+                    Cálculo del descuento del 13%
+                    y sueldo final.
+                </p>
+
+                <a href="pro07.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="numero">
+                    08
+                </div>
+
+                <h3>
+                    Consumo de combustible
+                </h3>
+
+                <p>
+                    Cálculo de galones necesarios
+                    para un recorrido.
+                </p>
+
+                <a href="pro08.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="numero">
+                    09
+                </div>
+
+                <h3>
+                    Soles a dólares
+                </h3>
+
+                <p>
+                    Conversión de soles a dólares
+                    utilizando el tipo de cambio.
+                </p>
+
+                <a href="pro09.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="numero">
+                    10
+                </div>
+
+                <h3>
+                    Presupuesto de viaje
+                </h3>
+
+                <p>
+                    Cálculo del presupuesto total
+                    para un viaje.
+                </p>
+
+                <a href="pro10.html" class="boton">
+                    ABRIR RETO →
+                </a>
+
+            </div>
+
 
         </section>
 
     </main>
 
 
-    <!-- PIE DE PÁGINA -->
     <footer>
 
-        <p>
-            Luis Angel Torres Sangama © 2026
-        </p>
+        <div>
+            <strong>WEB ENIGMA</strong>
+        </div>
 
-        <p>
-            Estudiante de Desarrollo de Software - CERTUS
-        </p>
+        <div>
+            LUIS ÁNGEL TORRES SANGAMA · CERTUS · 2026
+        </div>
 
     </footer>
+
 
 </body>
 
 </html>
-```

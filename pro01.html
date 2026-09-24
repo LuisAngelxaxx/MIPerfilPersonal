@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reto 01 | Bodega</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#e9e9e9;
+    color:#111;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.ticket{
+    background:white;
+    width:90%;
+    max-width:500px;
+    padding:40px;
+    border:2px solid #111;
+    box-shadow:12px 12px 0 #111;
+}
+
+.tag{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#777;
+    margin-bottom:20px;
+}
+
+h1{font-size:38px;margin-bottom:10px}
+
+.linea{
+    border-top:2px dashed #111;
+    margin:25px 0;
+}
+
+.dato{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+}
+
+.total{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.volver{
+    display:block;
+    margin-top:25px;
+    color:#111;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="ticket">
+
+    <div class="tag">WEB ENIGMA / RETO 01</div>
+
+    <h1>Compra en una bodega</h1>
+
+    <div class="linea"></div>
+
+    <div class="dato">
+        <span>Precio</span>
+        <span id="precio"></span>
+    </div>
+
+    <div class="dato">
+        <span>Cantidad</span>
+        <span id="cantidad"></span>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="total" id="resultado"></div>
+
+    <a href="index.html" class="volver">← VOLVER</a>
+
+</div>
+
+<script>
+let precio=parseFloat(prompt("Ingrese el precio de la gaseosa:"));
+let cantidad=parseInt(prompt("Ingrese la cantidad de gaseosas:"));
+let total=precio*cantidad;
+
+document.getElementById("precio").textContent="S/ "+precio.toFixed(2);
+document.getElementById("cantidad").textContent=cantidad;
+document.getElementById("resultado").textContent="TOTAL: S/ "+total.toFixed(2);
+</script>
+
+</body>
+</html>
+

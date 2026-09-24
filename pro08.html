@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reto 08 | Combustible</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#e5e5e5;
+    color:#111;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.tablero{
+    width:90%;
+    max-width:700px;
+    background:#111;
+    color:white;
+    padding:40px;
+    border-radius:20px;
+}
+
+.codigo{
+    color:#888;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+h1{
+    font-size:42px;
+    margin:15px 0 35px;
+}
+
+.indicadores{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.indicador{
+    background:#202020;
+    padding:30px;
+    border:1px solid #333;
+}
+
+.indicador small{
+    color:#888;
+}
+
+.indicador strong{
+    display:block;
+    font-size:35px;
+    margin-top:15px;
+}
+
+.resultado{
+    margin-top:15px;
+    background:white;
+    color:#111;
+    padding:30px;
+    text-align:center;
+}
+
+.resultado strong{
+    display:block;
+    font-size:45px;
+    margin-top:10px;
+}
+
+a{
+    display:block;
+    color:white;
+    margin-top:25px;
+    text-decoration:none;
+}
+
+@media(max-width:600px){
+    .indicadores{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="tablero">
+
+    <div class="codigo">WEB ENIGMA / RETO 08 / VEHICLE</div>
+
+    <h1>Consumo de combustible</h1>
+
+    <div class="indicadores">
+
+        <div class="indicador">
+            <small>DISTANCIA</small>
+            <strong id="km"></strong>
+        </div>
+
+        <div class="indicador">
+            <small>RENDIMIENTO</small>
+            <strong>40 km/gal</strong>
+        </div>
+
+    </div>
+
+    <div class="resultado">
+        GALONES NECESARIOS
+        <strong id="resultado"></strong>
+    </div>
+
+    <a href="index.html">← VOLVER</a>
+
+</div>
+
+<script>
+let kilometros=parseFloat(prompt("Ingrese la cantidad de kilómetros:"));
+let galones=kilometros/40;
+
+document.getElementById("km").textContent=kilometros+" km";
+document.getElementById("resultado").textContent=galones.toFixed(2)+" gal";
+</script>
+
+</body>
+</html>
+

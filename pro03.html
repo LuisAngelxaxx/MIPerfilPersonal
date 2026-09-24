@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reto 03 | Edad</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f3f3f3;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.calendario{
+    width:90%;
+    max-width:520px;
+    background:white;
+    border:1px solid #ccc;
+}
+
+.cabecera{
+    background:#111;
+    color:white;
+    padding:25px;
+}
+
+.numero{
+    font-size:80px;
+    font-weight:900;
+}
+
+.contenido{
+    padding:40px;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.anio{
+    font-size:50px;
+    font-weight:bold;
+    border-bottom:3px solid #111;
+    padding-bottom:15px;
+}
+
+.edad{
+    margin-top:30px;
+    font-size:24px;
+}
+
+a{
+    display:inline-block;
+    margin-top:30px;
+    color:#111;
+    font-weight:bold;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="calendario">
+
+    <div class="cabecera">
+        <div>WEB ENIGMA</div>
+        <div class="numero">03</div>
+    </div>
+
+    <div class="contenido">
+
+        <h1>Cálculo de edad</h1>
+
+        <div class="anio" id="anio"></div>
+
+        <div class="edad" id="resultado"></div>
+
+        <a href="index.html">← VOLVER</a>
+
+    </div>
+
+</div>
+
+<script>
+let nacimiento=parseInt(prompt("Ingrese su año de nacimiento:"));
+let añoActual=new Date().getFullYear();
+let edad=añoActual-nacimiento;
+
+document.getElementById("anio").textContent=añoActual;
+document.getElementById("resultado").textContent="Edad aproximada: "+edad+" años";
+</script>
+
+</body>
+</html>
+

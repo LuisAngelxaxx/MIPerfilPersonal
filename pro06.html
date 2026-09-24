@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reto 06 | Cena</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:monospace;
+    background:#ddd;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.recibo{
+    width:90%;
+    max-width:430px;
+    background:white;
+    padding:35px;
+    box-shadow:0 8px 25px #999;
+}
+
+h1{
+    text-align:center;
+    font-size:28px;
+}
+
+.centro{
+    text-align:center;
+    color:#777;
+    margin:10px 0 25px;
+}
+
+.linea{
+    border-top:2px dashed #111;
+    margin:20px 0;
+}
+
+.fila{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+}
+
+.total{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.pago{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+    margin-top:25px;
+}
+
+.pago strong{
+    display:block;
+    font-size:30px;
+    margin-top:8px;
+}
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:25px;
+    color:#111;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="recibo">
+
+    <h1>CUENTA DE CENA</h1>
+
+    <div class="centro">
+        WEB ENIGMA / RETO 06
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="fila">
+        <span>CUENTA</span>
+        <span id="cuenta"></span>
+    </div>
+
+    <div class="fila">
+        <span>PERSONAS</span>
+        <span id="personas"></span>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="fila total">
+        <span>POR PERSONA</span>
+        <span id="resultado"></span>
+    </div>
+
+    <div class="pago">
+        CADA PERSONA PAGA
+        <strong id="pago"></strong>
+    </div>
+
+    <a href="index.html">← VOLVER</a>
+
+</div>
+
+<script>
+let cuenta=parseFloat(prompt("Ingrese el monto total de la cuenta:"));
+let personas=parseInt(prompt("Ingrese la cantidad de personas:"));
+
+let pagoPersona=cuenta/personas;
+
+document.getElementById("cuenta").textContent="S/ "+cuenta.toFixed(2);
+document.getElementById("personas").textContent=personas;
+document.getElementById("resultado").textContent="S/ "+pagoPersona.toFixed(2);
+document.getElementById("pago").textContent="S/ "+pagoPersona.toFixed(2);
+</script>
+
+</body>
+</html>
+

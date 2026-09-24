@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reto 04 | Notas</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+.dashboard{
+    max-width:850px;
+    margin:auto;
+}
+
+.encabezado{
+    border-bottom:1px solid #444;
+    padding-bottom:25px;
+    margin-bottom:30px;
+}
+
+.encabezado span{
+    color:#888;
+    letter-spacing:3px;
+}
+
+h1{
+    font-size:45px;
+    margin-top:10px;
+}
+
+.notas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.nota{
+    background:#1d1d1d;
+    padding:30px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+.nota small{
+    color:#888;
+}
+
+.nota div{
+    font-size:45px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.promedio{
+    margin-top:20px;
+    background:white;
+    color:#111;
+    padding:30px;
+    text-align:center;
+}
+
+.promedio strong{
+    display:block;
+    font-size:45px;
+}
+
+a{
+    display:block;
+    margin-top:25px;
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:600px){
+    .notas{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="encabezado">
+        <span>WEB ENIGMA / RETO 04</span>
+        <h1>Promedio de notas</h1>
+    </div>
+
+    <div class="notas">
+
+        <div class="nota">
+            <small>NOTA 01</small>
+            <div id="nota1"></div>
+        </div>
+
+        <div class="nota">
+            <small>NOTA 02</small>
+            <div id="nota2"></div>
+        </div>
+
+        <div class="nota">
+            <small>NOTA 03</small>
+            <div id="nota3"></div>
+        </div>
+
+    </div>
+
+    <div class="promedio">
+        PROMEDIO FINAL
+        <strong id="resultado"></strong>
+    </div>
+
+    <a href="index.html">← VOLVER A WEB ENIGMA</a>
+
+</div>
+
+<script>
+let nota1=parseFloat(prompt("Ingrese la primera nota:"));
+let nota2=parseFloat(prompt("Ingrese la segunda nota:"));
+let nota3=parseFloat(prompt("Ingrese la tercera nota:"));
+
+let promedio=(nota1+nota2+nota3)/3;
+
+document.getElementById("nota1").textContent=nota1;
+document.getElementById("nota2").textContent=nota2;
+document.getElementById("nota3").textContent=nota3;
+document.getElementById("resultado").textContent=promedio.toFixed(2);
+</script>
+
+</body>
+</html>
+
